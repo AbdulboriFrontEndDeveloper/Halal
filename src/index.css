@@ -1,0 +1,66 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    scroll-behavior: smooth;
+    font-family: sans-serif;
+}
+
+@layer base {
+    label {
+        @apply flex flex-col
+    }
+
+    input, select, textarea {
+        @apply bg-transparent border outline-none p-2 rounded
+    }
+}
+
+.active{
+    color: red;
+}
+
+::-webkit-scrollbar{
+    width: 8px;
+} 
+::-webkit-scrollbar-track{
+    background: transparent;
+}
+::-webkit-scrollbar-thumb{
+    background: #dc2626;
+    border-radius: 10px;
+}
+
+.main-container {
+    max-width: 1400px;
+    margin-inline: auto;
+    padding-left: 12px;
+    padding-right: 12px;
+}
+
+.swiper-button-prev,
+.swiper-button-next {
+    background: #000;
+    width: 35px;
+    height: 35px;
+    border-radius: 50%;
+}
+
+.swiper-button-prev:after,
+.swiper-button-next:after {
+    font-size: 15px;
+    color: #fff;
+    font-weight: bold;
+}
+
+.swiper-button-prev.swiper-button-disabled, .swiper-button-next.swiper-button-disabled{
+    opacity: 0;
+}
+
+iframe{
+    width: 100%;
+}
